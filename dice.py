@@ -14,4 +14,4 @@ def averageDiceCoefficient(predY, Y):
     diceCoefficients = []
     for i in range(predY.shape[0]):
         diceCoefficients.append(diceCoefficient(predY[i], Y[i]))
-return np.mean(diceCoefficients)
+    return np.mean(diceCoefficients)
