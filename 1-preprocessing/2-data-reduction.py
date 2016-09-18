@@ -6,11 +6,11 @@ import skimage.util
 import dice
 import scipy.spatial.distance as spdist
 import pylab as pl
-DATAPATH= "../USNS/ResizedData/train"
-OUTDIR = "../USNS/CleanData/train"
+DATAPATH= "../USNS/ResizedData/train/compressed"
+OUTDIR = "../USNS/CleanedData/train"
 def loadPatient(pid):
     data = np.load(DATAPATH+"/trainData"+str(pid)+".npz")
-    print "Data Loaded for ",pid
+    # print "Data Loaded for ",pid
     return data["X"],data["Y"],data["imgNames"]
 
 def computeImgHist(img):
@@ -49,8 +49,7 @@ def filterImagesForPatient(pid):
         cv2.imwrite(OUTDIR+"/"+mask_fname, mask)
         os.listdir(OUTDIR)
     
-    print 'Discarded ', np.count_nonzero(valids), " images for patient %d" % pid
+    print 'Discarded ', np.count_nonzero(~valids), " images for patient %d" % pid
 
-for pid in range(1,47):
-    print "Working on ",pid
+for pid in range(1,48):
     filterImagesForPatient(pid)

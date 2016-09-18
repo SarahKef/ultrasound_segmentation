@@ -9,11 +9,11 @@ import scipy.spatial.distance as spdist
 import pylab as pl
 DATAPATH = "../USNS/RawData/train"
 DATASAVEPATH = "../USNS/ResizedData/train"
+
 NEWIMGSIZE = (128,128)
 def loadPreProcess(imgName):
     pnumber, imnumber = imgName.split(".")[0].split('_')
     maskName = imgName.split(".")[0]+"_mask.tif"
-    print imgName, maskName
     
     img = cv2.imread(DATAPATH+"/"+imgName, cv2.IMREAD_GRAYSCALE)
     mask = cv2.imread(DATAPATH+"/"+maskName, cv2.IMREAD_GRAYSCALE)
@@ -37,7 +37,7 @@ X = np.array(imgs)
 Y = np.array(masks)
 pids = np.array(pnumbers)
 imgNames = np.array(imgNames)
-np.savez(DATASAVEPATH+"/trainData.npz",X=X,Y=Y,pids=pids,imgNames=imgNames)
+np.savez(DATASAVEPATH+"/compressed/trainData.npz",X=X,Y=Y,pids=pids,imgNames=imgNames)
 i=0
 dope = {}
 for pid in set(pids):
@@ -49,4 +49,4 @@ for i in range(len(X)):
     dope[pids[i]]["imgNames"].append(imgNames[i])
 
 for pid in set(pids):
-    np.savez(DATASAVEPATH+"/trainData"+str(pid)+".npz",X=dope[pid]["X"],Y=dope[pid]["Y"],imgNames=dope[pid]["imgNames"])    
+    np.savez(DATASAVEPATH+"/compressed/trainData"+str(pid)+".npz",X=dope[pid]["X"],Y=dope[pid]["Y"],imgNames=dope[pid]["imgNames"])    
