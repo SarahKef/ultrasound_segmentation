@@ -1,6 +1,7 @@
+import unet
 import os
 os.environ['KERAS_BACKEND'] = 'theano'
-os.environ['THEANO_FLAGS'] = 'mode=FAST_RUN,device=gpu0,floatX=float32'
+os.environ['THEANO_FLAGS'] = 'floatX=float32,device=gpu,lib.cnmem=0.8,dnn.conv.algo_bwd_filter=deterministic,dnn.conv.algo_bwd_data=deterministic,blas.ldflags=-LC:/toolkits/openblas-0.2.14-int32/bin -lopenblas'
 import theano
 import keras
 from keras.layers import Input, Dense, Dropout, Activation, Flatten, merge, RepeatVector, Permute, Reshape
@@ -15,7 +16,7 @@ from keras.models import model_from_json
 from keras.callbacks import ModelCheckpoint
 import keras.backend as K
 import numpy as np
-import unet
+
 AUGMENTEDDATAPATH = "../USNS/AugmentedData/compressed"
 data = np.load(AUGMENTEDDATAPATH+"/Data.npz")
 X_train=data['X_train']
@@ -66,3 +67,8 @@ history = model.fit(
     callbacks=[model_checkpoint]
 )
 
+model_json = model.to_json()
+with open("model.json","w") as json_file:
+    json_file.write(model_json)
+model.save_weights("model_weights.h5")
+print("Saved the Model to Disk")

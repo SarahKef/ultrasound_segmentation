@@ -2,7 +2,7 @@ import numpy as np
 import time
 import theano
 
-print('blas.ldflags=', theano.config.blas.ldflags)
+print('blas.ldflags=', '-LC:/toolkits/openblas-0.2.14-int32/bin -lopenblas')
 
 A = np.random.rand(1000, 10000).astype(theano.config.floatX)
 B = np.random.rand(10000, 1000).astype(theano.config.floatX)

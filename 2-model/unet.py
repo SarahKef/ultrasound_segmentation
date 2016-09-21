@@ -1,6 +1,6 @@
 import os
 os.environ['KERAS_BACKEND'] = 'theano'
-os.environ['THEANO_FLAGS'] = 'mode=FAST_RUN,device=gpu0,floatX=float32'
+os.environ['THEANO_FLAGS'] = 'floatX=float32,device=gpu,lib.cnmem=0.8,dnn.conv.algo_bwd_filter=deterministic,dnn.conv.algo_bwd_data=deterministic,blas.ldflags=-LC:/toolkits/openblas-0.2.14-int32/bin -lopenblas'
 import theano
 import keras
 from keras.layers import Input, Dense, Dropout, Activation, Flatten, merge, RepeatVector, Permute, Reshape
@@ -144,5 +144,8 @@ def generate_model(input_shape):
     model.compile(optimizer='adam', loss='binary_crossentropy',
                 loss_weights=[1., 0.2, 0.05, 0.01], metrics=metrics)
 
+    # print(model.summary())
+    with open("model_summary.txt","w") as summary_file:
+        summary_file.write(str(model.summary()))
     print_summary(model.layers)
     return model
