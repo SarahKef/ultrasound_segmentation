@@ -15,6 +15,7 @@ from keras.models import model_from_json
 from keras.callbacks import ModelCheckpoint
 import keras.backend as K
 import numpy as np
+
 class Maxout2D(Layer):
     def __init__(self, output_dim, cardinality, init='glorot_uniform', **kwargs):
         super(Maxout2D, self).__init__(**kwargs)
@@ -144,8 +145,5 @@ def generate_model(input_shape):
     model.compile(optimizer='adam', loss='binary_crossentropy',
                 loss_weights=[1., 0.2, 0.05, 0.01], metrics=metrics)
 
-    # print(model.summary())
-    with open("model_summary.txt","w") as summary_file:
-        summary_file.write(str(model.summary()))
     print_summary(model.layers)
     return model

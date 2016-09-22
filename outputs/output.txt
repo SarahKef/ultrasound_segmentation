@@ -1,0 +1,123 @@
+____________________________________________________________________________________________________
+Train on 7827 samples, validate on 290 samples
+Epoch 1/40
+7808/7827 [============================>.] - ETA: 0s - loss: 0.2042 - outmap_loss: 0.1733 - outmap4_loss: 0.0972 - outmap5_loss: 0.0919 - outbin_loss: 0.6891 - outbin_acc: 0.6423Epoch 00000: val_loss improved from inf to 0.18766, saving model to weights.hdf5
+7827/7827 [==============================] - 223s - loss: 0.2043 - outmap_loss: 0.1734 - outmap4_loss: 0.0971 - outmap5_loss: 0.0918 - outbin_loss: 0.6891 - outbin_acc: 0.6421 - val_loss: 0.1877 - val_outmap_loss: 0.1612 - val_outmap4_loss: 0.0769 - val_outmap5_loss: 0.1014 - val_outbin_loss: 0.6027 - val_outbin_acc: 0.7103
+Epoch 2/40
+7808/7827 [============================>.] - ETA: 0s - loss: 0.1780 - outmap_loss: 0.1614 - outmap4_loss: 0.0415 - outmap5_loss: 0.0478 - outbin_loss: 0.5878 - outbin_acc: 0.7018Epoch 00001: val_loss improved from 0.18766 to 0.18225, saving model to weights.hdf5
+7827/7827 [==============================] - 219s - loss: 0.1780 - outmap_loss: 0.1615 - outmap4_loss: 0.0415 - outmap5_loss: 0.0478 - outbin_loss: 0.5877 - outbin_acc: 0.7018 - val_loss: 0.1822 - val_outmap_loss: 0.1612 - val_outmap4_loss: 0.0608 - val_outmap5_loss: 0.0681 - val_outbin_loss: 0.5503 - val_outbin_acc: 0.7793
+Epoch 3/40
+7808/7827 [============================>.] - ETA: 0s - loss: 0.1766 - outmap_loss: 0.1614 - outmap4_loss: 0.0374 - outmap5_loss: 0.0449 - outbin_loss: 0.5468 - outbin_acc: 0.7303Epoch 00002: val_loss improved from 0.18225 to 0.17887, saving model to weights.hdf5
+7827/7827 [==============================] - 219s - loss: 0.1767 - outmap_loss: 0.1615 - outmap4_loss: 0.0374 - outmap5_loss: 0.0449 - outbin_loss: 0.5469 - outbin_acc: 0.7298 - val_loss: 0.1789 - val_outmap_loss: 0.1612 - val_outmap4_loss: 0.0462 - val_outmap5_loss: 0.0591 - val_outbin_loss: 0.5515 - val_outbin_acc: 0.7138
+Epoch 4/40
+7808/7827 [============================>.] - ETA: 0s - loss: 0.1760 - outmap_loss: 0.1617 - outmap4_loss: 0.0350 - outmap5_loss: 0.0433 - outbin_loss: 0.5080 - outbin_acc: 0.7650Epoch 00003: val_loss improved from 0.17887 to 0.17372, saving model to weights.hdf5
+7827/7827 [==============================] - 219s - loss: 0.1757 - outmap_loss: 0.1615 - outmap4_loss: 0.0350 - outmap5_loss: 0.0432 - outbin_loss: 0.5074 - outbin_acc: 0.7652 - val_loss: 0.1737 - val_outmap_loss: 0.1612 - val_outmap4_loss: 0.0312 - val_outmap5_loss: 0.0399 - val_outbin_loss: 0.4330 - val_outbin_acc: 0.8000
+Epoch 5/40
+7808/7827 [============================>.] - ETA: 0s - loss: 0.1745 - outmap_loss: 0.1614 - outmap4_loss: 0.0325 - outmap5_loss: 0.0411 - outbin_loss: 0.4522 - outbin_acc: 0.7973Epoch 00004: val_loss did not improve
+7827/7827 [==============================] - 219s - loss: 0.1745 - outmap_loss: 0.1615 - outmap4_loss: 0.0325 - outmap5_loss: 0.0412 - outbin_loss: 0.4522 - outbin_acc: 0.7974 - val_loss: 0.1745 - val_outmap_loss: 0.1611 - val_outmap4_loss: 0.0331 - val_outmap5_loss: 0.0409 - val_outbin_loss: 0.4648 - val_outbin_acc: 0.7966
+Epoch 6/40
+7808/7827 [============================>.] - ETA: 0s - loss: 0.1737 - outmap_loss: 0.1614 - outmap4_loss: 0.0307 - outmap5_loss: 0.0395 - outbin_loss: 0.4168 - outbin_acc: 0.8161Epoch 00005: val_loss did not improve
+7827/7827 [==============================] - 220s - loss: 0.1737 - outmap_loss: 0.1615 - outmap4_loss: 0.0307 - outmap5_loss: 0.0395 - outbin_loss: 0.4173 - outbin_acc: 0.8159 - val_loss: 0.1739 - val_outmap_loss: 0.1612 - val_outmap4_loss: 0.0334 - val_outmap5_loss: 0.0421 - val_outbin_loss: 0.4008 - val_outbin_acc: 0.8310
+Epoch 7/40
+7808/7827 [============================>.] - ETA: 0s - loss: 0.1729 - outmap_loss: 0.1612 - outmap4_loss: 0.0296 - outmap5_loss: 0.0383 - outbin_loss: 0.3865 - outbin_acc: 0.8324Epoch 00006: val_loss improved from 0.17372 to 0.17237, saving model to weights.hdf5
+7827/7827 [==============================] - 220s - loss: 0.1732 - outmap_loss: 0.1614 - outmap4_loss: 0.0296 - outmap5_loss: 0.0384 - outbin_loss: 0.3867 - outbin_acc: 0.8320 - val_loss: 0.1724 - val_outmap_loss: 0.1611 - val_outmap4_loss: 0.0289 - val_outmap5_loss: 0.0381 - val_outbin_loss: 0.3536 - val_outbin_acc: 0.8379
+Epoch 8/40
+7808/7827 [============================>.] - ETA: 0s - loss: 0.1725 - outmap_loss: 0.1613 - outmap4_loss: 0.0283 - outmap5_loss: 0.0370 - outbin_loss: 0.3651 - outbin_acc: 0.8443Epoch 00007: val_loss improved from 0.17237 to 0.17185, saving model to weights.hdf5
+7827/7827 [==============================] - 220s - loss: 0.1726 - outmap_loss: 0.1614 - outmap4_loss: 0.0284 - outmap5_loss: 0.0371 - outbin_loss: 0.3650 - outbin_acc: 0.8444 - val_loss: 0.1718 - val_outmap_loss: 0.1611 - val_outmap4_loss: 0.0274 - val_outmap5_loss: 0.0358 - val_outbin_loss: 0.3460 - val_outbin_acc: 0.8655
+Epoch 9/40
+7808/7827 [============================>.] - ETA: 0s - loss: 0.0718 - outmap_loss: 0.0550 - outmap4_loss: 0.0423 - outmap5_loss: 0.0501 - outbin_loss: 0.5832 - outbin_acc: 0.7065Epoch 00008: val_loss improved from 0.17185 to 0.03566, saving model to weights.hdf5
+7827/7827 [==============================] - 219s - loss: 0.0717 - outmap_loss: 0.0549 - outmap4_loss: 0.0423 - outmap5_loss: 0.0501 - outbin_loss: 0.5834 - outbin_acc: 0.7064 - val_loss: 0.0357 - val_outmap_loss: 0.0235 - val_outmap4_loss: 0.0281 - val_outmap5_loss: 0.0393 - val_outbin_loss: 0.4596 - val_outbin_acc: 0.8138
+Epoch 10/40
+7808/7827 [============================>.] - ETA: 0s - loss: 0.0364 - outmap_loss: 0.0243 - outmap4_loss: 0.0293 - outmap5_loss: 0.0388 - outbin_loss: 0.4249 - outbin_acc: 0.8088Epoch 00009: val_loss improved from 0.03566 to 0.02952, saving model to weights.hdf5
+7827/7827 [==============================] - 219s - loss: 0.0364 - outmap_loss: 0.0243 - outmap4_loss: 0.0293 - outmap5_loss: 0.0388 - outbin_loss: 0.4250 - outbin_acc: 0.8087 - val_loss: 0.0295 - val_outmap_loss: 0.0190 - val_outmap4_loss: 0.0262 - val_outmap5_loss: 0.0355 - val_outbin_loss: 0.3535 - val_outbin_acc: 0.8310
+Epoch 11/40
+7808/7827 [============================>.] - ETA: 0s - loss: 0.0322 - outmap_loss: 0.0215 - outmap4_loss: 0.0271 - outmap5_loss: 0.0361 - outbin_loss: 0.3483 - outbin_acc: 0.8553Epoch 00010: val_loss improved from 0.02952 to 0.02788, saving model to weights.hdf5
+7827/7827 [==============================] - 220s - loss: 0.0322 - outmap_loss: 0.0215 - outmap4_loss: 0.0271 - outmap5_loss: 0.0361 - outbin_loss: 0.3481 - outbin_acc: 0.8555 - val_loss: 0.0279 - val_outmap_loss: 0.0181 - val_outmap4_loss: 0.0248 - val_outmap5_loss: 0.0340 - val_outbin_loss: 0.3144 - val_outbin_acc: 0.8586
+Epoch 12/40
+7808/7827 [============================>.] - ETA: 0s - loss: 0.0306 - outmap_loss: 0.0203 - outmap4_loss: 0.0262 - outmap5_loss: 0.0351 - outbin_loss: 0.3318 - outbin_acc: 0.8619Epoch 00011: val_loss did not improve
+7827/7827 [==============================] - 219s - loss: 0.0306 - outmap_loss: 0.0203 - outmap4_loss: 0.0262 - outmap5_loss: 0.0352 - outbin_loss: 0.3319 - outbin_acc: 0.8619 - val_loss: 0.0300 - val_outmap_loss: 0.0192 - val_outmap4_loss: 0.0266 - val_outmap5_loss: 0.0340 - val_outbin_loss: 0.3702 - val_outbin_acc: 0.8379
+Epoch 13/40
+7808/7827 [============================>.] - ETA: 0s - loss: 0.0297 - outmap_loss: 0.0196 - outmap4_loss: 0.0259 - outmap5_loss: 0.0346 - outbin_loss: 0.3182 - outbin_acc: 0.8671Epoch 00012: val_loss improved from 0.02788 to 0.02760, saving model to weights.hdf5
+7827/7827 [==============================] - 220s - loss: 0.0297 - outmap_loss: 0.0196 - outmap4_loss: 0.0259 - outmap5_loss: 0.0346 - outbin_loss: 0.3182 - outbin_acc: 0.8673 - val_loss: 0.0276 - val_outmap_loss: 0.0181 - val_outmap4_loss: 0.0248 - val_outmap5_loss: 0.0347 - val_outbin_loss: 0.2850 - val_outbin_acc: 0.8793
+Epoch 14/40
+7808/7827 [============================>.] - ETA: 0s - loss: 0.0286 - outmap_loss: 0.0188 - outmap4_loss: 0.0252 - outmap5_loss: 0.0341 - outbin_loss: 0.3020 - outbin_acc: 0.8701Epoch 00013: val_loss improved from 0.02760 to 0.02563, saving model to weights.hdf5
+7827/7827 [==============================] - 220s - loss: 0.0286 - outmap_loss: 0.0188 - outmap4_loss: 0.0252 - outmap5_loss: 0.0341 - outbin_loss: 0.3017 - outbin_acc: 0.8703 - val_loss: 0.0256 - val_outmap_loss: 0.0164 - val_outmap4_loss: 0.0235 - val_outmap5_loss: 0.0320 - val_outbin_loss: 0.2900 - val_outbin_acc: 0.8793
+Epoch 15/40
+7808/7827 [============================>.] - ETA: 0s - loss: 0.0281 - outmap_loss: 0.0184 - outmap4_loss: 0.0250 - outmap5_loss: 0.0338 - outbin_loss: 0.2994 - outbin_acc: 0.8768Epoch 00014: val_loss did not improve
+7827/7827 [==============================] - 219s - loss: 0.0281 - outmap_loss: 0.0184 - outmap4_loss: 0.0250 - outmap5_loss: 0.0338 - outbin_loss: 0.2993 - outbin_acc: 0.8770 - val_loss: 0.0257 - val_outmap_loss: 0.0163 - val_outmap4_loss: 0.0245 - val_outmap5_loss: 0.0339 - val_outbin_loss: 0.2815 - val_outbin_acc: 0.8862
+Epoch 16/40
+7808/7827 [============================>.] - ETA: 0s - loss: 0.0269 - outmap_loss: 0.0175 - outmap4_loss: 0.0244 - outmap5_loss: 0.0333 - outbin_loss: 0.2781 - outbin_acc: 0.8859Epoch 00015: val_loss improved from 0.02563 to 0.02477, saving model to weights.hdf5
+7827/7827 [==============================] - 221s - loss: 0.0269 - outmap_loss: 0.0176 - outmap4_loss: 0.0244 - outmap5_loss: 0.0333 - outbin_loss: 0.2785 - outbin_acc: 0.8859 - val_loss: 0.0248 - val_outmap_loss: 0.0158 - val_outmap4_loss: 0.0235 - val_outmap5_loss: 0.0326 - val_outbin_loss: 0.2663 - val_outbin_acc: 0.9034
+Epoch 17/40
+7808/7827 [============================>.] - ETA: 0s - loss: 0.0270 - outmap_loss: 0.0176 - outmap4_loss: 0.0246 - outmap5_loss: 0.0336 - outbin_loss: 0.2808 - outbin_acc: 0.8824Epoch 00016: val_loss did not improve
+7827/7827 [==============================] - 218s - loss: 0.0270 - outmap_loss: 0.0176 - outmap4_loss: 0.0246 - outmap5_loss: 0.0336 - outbin_loss: 0.2809 - outbin_acc: 0.8823 - val_loss: 0.0250 - val_outmap_loss: 0.0161 - val_outmap4_loss: 0.0237 - val_outmap5_loss: 0.0326 - val_outbin_loss: 0.2531 - val_outbin_acc: 0.9069
+Epoch 18/40
+7808/7827 [============================>.] - ETA: 0s - loss: 0.0259 - outmap_loss: 0.0168 - outmap4_loss: 0.0241 - outmap5_loss: 0.0331 - outbin_loss: 0.2644 - outbin_acc: 0.8906Epoch 00017: val_loss improved from 0.02477 to 0.02436, saving model to weights.hdf5
+7827/7827 [==============================] - 219s - loss: 0.0259 - outmap_loss: 0.0168 - outmap4_loss: 0.0241 - outmap5_loss: 0.0331 - outbin_loss: 0.2646 - outbin_acc: 0.8904 - val_loss: 0.0244 - val_outmap_loss: 0.0157 - val_outmap4_loss: 0.0236 - val_outmap5_loss: 0.0323 - val_outbin_loss: 0.2360 - val_outbin_acc: 0.8897
+Epoch 19/40
+7808/7827 [============================>.] - ETA: 0s - loss: 0.0252 - outmap_loss: 0.0163 - outmap4_loss: 0.0236 - outmap5_loss: 0.0327 - outbin_loss: 0.2563 - outbin_acc: 0.8973Epoch 00018: val_loss did not improve
+7827/7827 [==============================] - 221s - loss: 0.0252 - outmap_loss: 0.0163 - outmap4_loss: 0.0237 - outmap5_loss: 0.0328 - outbin_loss: 0.2564 - outbin_acc: 0.8973 - val_loss: 0.0253 - val_outmap_loss: 0.0161 - val_outmap4_loss: 0.0236 - val_outmap5_loss: 0.0332 - val_outbin_loss: 0.2843 - val_outbin_acc: 0.8931
+Epoch 20/40
+7808/7827 [============================>.] - ETA: 0s - loss: 0.0251 - outmap_loss: 0.0162 - outmap4_loss: 0.0235 - outmap5_loss: 0.0328 - outbin_loss: 0.2581 - outbin_acc: 0.8964Epoch 00019: val_loss did not improve
+7827/7827 [==============================] - 220s - loss: 0.0251 - outmap_loss: 0.0162 - outmap4_loss: 0.0235 - outmap5_loss: 0.0328 - outbin_loss: 0.2578 - outbin_acc: 0.8965 - val_loss: 0.0296 - val_outmap_loss: 0.0190 - val_outmap4_loss: 0.0259 - val_outmap5_loss: 0.0359 - val_outbin_loss: 0.3605 - val_outbin_acc: 0.8621
+Epoch 21/40
+7808/7827 [============================>.] - ETA: 0s - loss: 0.0248 - outmap_loss: 0.0159 - outmap4_loss: 0.0235 - outmap5_loss: 0.0328 - outbin_loss: 0.2517 - outbin_acc: 0.9010Epoch 00020: val_loss improved from 0.02436 to 0.02408, saving model to weights.hdf5
+7827/7827 [==============================] - 222s - loss: 0.0248 - outmap_loss: 0.0159 - outmap4_loss: 0.0235 - outmap5_loss: 0.0328 - outbin_loss: 0.2516 - outbin_acc: 0.9010 - val_loss: 0.0241 - val_outmap_loss: 0.0153 - val_outmap4_loss: 0.0230 - val_outmap5_loss: 0.0322 - val_outbin_loss: 0.2547 - val_outbin_acc: 0.9000
+Epoch 22/40
+7808/7827 [============================>.] - ETA: 0s - loss: 0.0244 - outmap_loss: 0.0156 - outmap4_loss: 0.0233 - outmap5_loss: 0.0328 - outbin_loss: 0.2399 - outbin_acc: 0.9036Epoch 00021: val_loss did not improve
+7827/7827 [==============================] - 219s - loss: 0.0243 - outmap_loss: 0.0156 - outmap4_loss: 0.0233 - outmap5_loss: 0.0328 - outbin_loss: 0.2402 - outbin_acc: 0.9034 - val_loss: 0.0254 - val_outmap_loss: 0.0163 - val_outmap4_loss: 0.0248 - val_outmap5_loss: 0.0338 - val_outbin_loss: 0.2462 - val_outbin_acc: 0.9138
+Epoch 23/40
+7808/7827 [============================>.] - ETA: 0s - loss: 0.0239 - outmap_loss: 0.0154 - outmap4_loss: 0.0230 - outmap5_loss: 0.0325 - outbin_loss: 0.2317 - outbin_acc: 0.9064Epoch 00022: val_loss did not improve
+7827/7827 [==============================] - 219s - loss: 0.0239 - outmap_loss: 0.0154 - outmap4_loss: 0.0230 - outmap5_loss: 0.0325 - outbin_loss: 0.2321 - outbin_acc: 0.9063 - val_loss: 0.0255 - val_outmap_loss: 0.0164 - val_outmap4_loss: 0.0246 - val_outmap5_loss: 0.0331 - val_outbin_loss: 0.2557 - val_outbin_acc: 0.8897
+Epoch 24/40
+7808/7827 [============================>.] - ETA: 0s - loss: 0.0233 - outmap_loss: 0.0149 - outmap4_loss: 0.0226 - outmap5_loss: 0.0320 - outbin_loss: 0.2281 - outbin_acc: 0.9077Epoch 00023: val_loss improved from 0.02408 to 0.02259, saving model to weights.hdf5
+7827/7827 [==============================] - 219s - loss: 0.0234 - outmap_loss: 0.0150 - outmap4_loss: 0.0227 - outmap5_loss: 0.0321 - outbin_loss: 0.2288 - outbin_acc: 0.9074 - val_loss: 0.0226 - val_outmap_loss: 0.0143 - val_outmap4_loss: 0.0224 - val_outmap5_loss: 0.0319 - val_outbin_loss: 0.2233 - val_outbin_acc: 0.9172
+Epoch 25/40
+7808/7827 [============================>.] - ETA: 0s - loss: 0.0235 - outmap_loss: 0.0150 - outmap4_loss: 0.0228 - outmap5_loss: 0.0322 - outbin_loss: 0.2288 - outbin_acc: 0.9082Epoch 00024: val_loss improved from 0.02259 to 0.02230, saving model to weights.hdf5
+7827/7827 [==============================] - 220s - loss: 0.0235 - outmap_loss: 0.0151 - outmap4_loss: 0.0228 - outmap5_loss: 0.0322 - outbin_loss: 0.2295 - outbin_acc: 0.9079 - val_loss: 0.0223 - val_outmap_loss: 0.0143 - val_outmap4_loss: 0.0221 - val_outmap5_loss: 0.0320 - val_outbin_loss: 0.2012 - val_outbin_acc: 0.9310
+Epoch 26/40
+7808/7827 [============================>.] - ETA: 0s - loss: 0.0230 - outmap_loss: 0.0146 - outmap4_loss: 0.0226 - outmap5_loss: 0.0320 - outbin_loss: 0.2193 - outbin_acc: 0.9156Epoch 00025: val_loss did not improve
+7827/7827 [==============================] - 225s - loss: 0.0229 - outmap_loss: 0.0146 - outmap4_loss: 0.0226 - outmap5_loss: 0.0320 - outbin_loss: 0.2194 - outbin_acc: 0.9154 - val_loss: 0.0231 - val_outmap_loss: 0.0148 - val_outmap4_loss: 0.0224 - val_outmap5_loss: 0.0314 - val_outbin_loss: 0.2192 - val_outbin_acc: 0.9207
+Epoch 27/40
+7808/7827 [============================>.] - ETA: 0s - loss: 0.0230 - outmap_loss: 0.0147 - outmap4_loss: 0.0226 - outmap5_loss: 0.0320 - outbin_loss: 0.2205 - outbin_acc: 0.9103Epoch 00026: val_loss did not improve
+7827/7827 [==============================] - 221s - loss: 0.0230 - outmap_loss: 0.0147 - outmap4_loss: 0.0225 - outmap5_loss: 0.0319 - outbin_loss: 0.2201 - outbin_acc: 0.9106 - val_loss: 0.0228 - val_outmap_loss: 0.0147 - val_outmap4_loss: 0.0222 - val_outmap5_loss: 0.0307 - val_outbin_loss: 0.2172 - val_outbin_acc: 0.9069
+Epoch 28/40
+7808/7827 [============================>.] - ETA: 0s - loss: 0.0222 - outmap_loss: 0.0142 - outmap4_loss: 0.0221 - outmap5_loss: 0.0317 - outbin_loss: 0.2056 - outbin_acc: 0.9197Epoch 00027: val_loss did not improve
+7827/7827 [==============================] - 220s - loss: 0.0222 - outmap_loss: 0.0142 - outmap4_loss: 0.0221 - outmap5_loss: 0.0317 - outbin_loss: 0.2053 - outbin_acc: 0.9199 - val_loss: 0.0231 - val_outmap_loss: 0.0147 - val_outmap4_loss: 0.0226 - val_outmap5_loss: 0.0319 - val_outbin_loss: 0.2282 - val_outbin_acc: 0.9034
+Epoch 29/40
+7808/7827 [============================>.] - ETA: 0s - loss: 0.0221 - outmap_loss: 0.0141 - outmap4_loss: 0.0221 - outmap5_loss: 0.0318 - outbin_loss: 0.2033 - outbin_acc: 0.9141Epoch 00028: val_loss did not improve
+7827/7827 [==============================] - 225s - loss: 0.0221 - outmap_loss: 0.0141 - outmap4_loss: 0.0221 - outmap5_loss: 0.0318 - outbin_loss: 0.2035 - outbin_acc: 0.9139 - val_loss: 0.0229 - val_outmap_loss: 0.0147 - val_outmap4_loss: 0.0222 - val_outmap5_loss: 0.0313 - val_outbin_loss: 0.2224 - val_outbin_acc: 0.9103
+Epoch 30/40
+7808/7827 [============================>.] - ETA: 0s - loss: 0.0221 - outmap_loss: 0.0141 - outmap4_loss: 0.0221 - outmap5_loss: 0.0316 - outbin_loss: 0.2025 - outbin_acc: 0.9191Epoch 00029: val_loss did not improve
+7827/7827 [==============================] - 221s - loss: 0.0221 - outmap_loss: 0.0141 - outmap4_loss: 0.0221 - outmap5_loss: 0.0316 - outbin_loss: 0.2023 - outbin_acc: 0.9191 - val_loss: 0.0238 - val_outmap_loss: 0.0151 - val_outmap4_loss: 0.0228 - val_outmap5_loss: 0.0319 - val_outbin_loss: 0.2621 - val_outbin_acc: 0.9000
+Epoch 31/40
+7808/7827 [============================>.] - ETA: 0s - loss: 0.0222 - outmap_loss: 0.0141 - outmap4_loss: 0.0223 - outmap5_loss: 0.0318 - outbin_loss: 0.2062 - outbin_acc: 0.9164Epoch 00030: val_loss did not improve
+7827/7827 [==============================] - 219s - loss: 0.0222 - outmap_loss: 0.0141 - outmap4_loss: 0.0223 - outmap5_loss: 0.0318 - outbin_loss: 0.2063 - outbin_acc: 0.9162 - val_loss: 0.0260 - val_outmap_loss: 0.0163 - val_outmap4_loss: 0.0247 - val_outmap5_loss: 0.0349 - val_outbin_loss: 0.2982 - val_outbin_acc: 0.8828
+Epoch 32/40
+7808/7827 [============================>.] - ETA: 0s - loss: 0.0218 - outmap_loss: 0.0139 - outmap4_loss: 0.0220 - outmap5_loss: 0.0316 - outbin_loss: 0.2008 - outbin_acc: 0.9215Epoch 00031: val_loss did not improve
+7827/7827 [==============================] - 219s - loss: 0.0218 - outmap_loss: 0.0138 - outmap4_loss: 0.0220 - outmap5_loss: 0.0316 - outbin_loss: 0.2007 - outbin_acc: 0.9214 - val_loss: 0.0239 - val_outmap_loss: 0.0154 - val_outmap4_loss: 0.0233 - val_outmap5_loss: 0.0322 - val_outbin_loss: 0.2186 - val_outbin_acc: 0.9172
+Epoch 33/40
+7808/7827 [============================>.] - ETA: 0s - loss: 0.0215 - outmap_loss: 0.0136 - outmap4_loss: 0.0217 - outmap5_loss: 0.0314 - outbin_loss: 0.1959 - outbin_acc: 0.9216Epoch 00032: val_loss did not improve
+7827/7827 [==============================] - 219s - loss: 0.0215 - outmap_loss: 0.0136 - outmap4_loss: 0.0217 - outmap5_loss: 0.0314 - outbin_loss: 0.1958 - outbin_acc: 0.9217 - val_loss: 0.0228 - val_outmap_loss: 0.0146 - val_outmap4_loss: 0.0221 - val_outmap5_loss: 0.0309 - val_outbin_loss: 0.2208 - val_outbin_acc: 0.9345
+Epoch 34/40
+7808/7827 [============================>.] - ETA: 0s - loss: 0.0215 - outmap_loss: 0.0136 - outmap4_loss: 0.0218 - outmap5_loss: 0.0313 - outbin_loss: 0.1970 - outbin_acc: 0.9235Epoch 00033: val_loss did not improve
+7827/7827 [==============================] - 218s - loss: 0.0215 - outmap_loss: 0.0136 - outmap4_loss: 0.0218 - outmap5_loss: 0.0313 - outbin_loss: 0.1970 - outbin_acc: 0.9235 - val_loss: 0.0238 - val_outmap_loss: 0.0151 - val_outmap4_loss: 0.0230 - val_outmap5_loss: 0.0320 - val_outbin_loss: 0.2451 - val_outbin_acc: 0.9069
+Epoch 35/40
+7808/7827 [============================>.] - ETA: 0s - loss: 0.0213 - outmap_loss: 0.0135 - outmap4_loss: 0.0217 - outmap5_loss: 0.0312 - outbin_loss: 0.1909 - outbin_acc: 0.9235Epoch 00034: val_loss did not improve
+7827/7827 [==============================] - 218s - loss: 0.0212 - outmap_loss: 0.0134 - outmap4_loss: 0.0216 - outmap5_loss: 0.0311 - outbin_loss: 0.1905 - outbin_acc: 0.9237 - val_loss: 0.0223 - val_outmap_loss: 0.0142 - val_outmap4_loss: 0.0221 - val_outmap5_loss: 0.0307 - val_outbin_loss: 0.2162 - val_outbin_acc: 0.9172
+Epoch 36/40
+7808/7827 [============================>.] - ETA: 0s - loss: 0.0207 - outmap_loss: 0.0131 - outmap4_loss: 0.0214 - outmap5_loss: 0.0310 - outbin_loss: 0.1693 - outbin_acc: 0.9334Epoch 00035: val_loss did not improve
+7827/7827 [==============================] - 221s - loss: 0.0207 - outmap_loss: 0.0131 - outmap4_loss: 0.0214 - outmap5_loss: 0.0310 - outbin_loss: 0.1704 - outbin_acc: 0.9329 - val_loss: 0.0230 - val_outmap_loss: 0.0147 - val_outmap4_loss: 0.0221 - val_outmap5_loss: 0.0311 - val_outbin_loss: 0.2291 - val_outbin_acc: 0.9207
+Epoch 37/40
+7808/7827 [============================>.] - ETA: 0s - loss: 0.0210 - outmap_loss: 0.0132 - outmap4_loss: 0.0215 - outmap5_loss: 0.0312 - outbin_loss: 0.1863 - outbin_acc: 0.9280Epoch 00036: val_loss did not improve
+7827/7827 [==============================] - 220s - loss: 0.0210 - outmap_loss: 0.0132 - outmap4_loss: 0.0215 - outmap5_loss: 0.0312 - outbin_loss: 0.1861 - outbin_acc: 0.9282 - val_loss: 0.0247 - val_outmap_loss: 0.0156 - val_outmap4_loss: 0.0240 - val_outmap5_loss: 0.0334 - val_outbin_loss: 0.2622 - val_outbin_acc: 0.9034
+Epoch 38/40
+7808/7827 [============================>.] - ETA: 0s - loss: 0.0211 - outmap_loss: 0.0133 - outmap4_loss: 0.0216 - outmap5_loss: 0.0313 - outbin_loss: 0.1901 - outbin_acc: 0.9239Epoch 00037: val_loss did not improve
+7827/7827 [==============================] - 220s - loss: 0.0211 - outmap_loss: 0.0133 - outmap4_loss: 0.0216 - outmap5_loss: 0.0313 - outbin_loss: 0.1902 - outbin_acc: 0.9239 - val_loss: 0.0245 - val_outmap_loss: 0.0157 - val_outmap4_loss: 0.0233 - val_outmap5_loss: 0.0325 - val_outbin_loss: 0.2487 - val_outbin_acc: 0.9034
+Epoch 39/40
+7808/7827 [============================>.] - ETA: 0s - loss: 0.0211 - outmap_loss: 0.0134 - outmap4_loss: 0.0217 - outmap5_loss: 0.0313 - outbin_loss: 0.1848 - outbin_acc: 0.9269Epoch 00038: val_loss did not improve
+7827/7827 [==============================] - 222s - loss: 0.0211 - outmap_loss: 0.0133 - outmap4_loss: 0.0217 - outmap5_loss: 0.0313 - outbin_loss: 0.1846 - outbin_acc: 0.9269 - val_loss: 0.0232 - val_outmap_loss: 0.0148 - val_outmap4_loss: 0.0223 - val_outmap5_loss: 0.0311 - val_outbin_loss: 0.2389 - val_outbin_acc: 0.9138
+Epoch 40/40
+7808/7827 [============================>.] - ETA: 0s - loss: 0.0205 - outmap_loss: 0.0129 - outmap4_loss: 0.0213 - outmap5_loss: 0.0309 - outbin_loss: 0.1742 - outbin_acc: 0.9326Epoch 00039: val_loss did not improve
+7827/7827 [==============================] - 220s - loss: 0.0205 - outmap_loss: 0.0129 - outmap4_loss: 0.0213 - outmap5_loss: 0.0309 - outbin_loss: 0.1743 - outbin_acc: 0.9327 - val_loss: 0.0231 - val_outmap_loss: 0.0151 - val_outmap4_loss: 0.0222 - val_outmap5_loss: 0.0311 - val_outbin_loss: 0.2068 - val_outbin_acc: 0.9276
+Saved the Model to Disk
