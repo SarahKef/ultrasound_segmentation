@@ -69,16 +69,15 @@ bin_thresh = 0.5
 import cv2
 kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE,(50,50))
 
-OUTDIR='../USNS/Predicted/Raw'
+OUTDIR='../USNS/Predicted/128'
 
 for i in range(Y_pred.shape[0]):
     imre = (Y_pred[i].squeeze() * 255).astype(np.uint8)
     imre = cv2.morphologyEx(imre, cv2.MORPH_CLOSE, kernel)
-    imre = cv2.resize(imre, (580, 420))
-    
     basename = str(i)
     cv2.imwrite(os.path.join(OUTDIR, basename + '.png'), imre)
-    
+    Y_pred[i] = imre
     print '\r%d / %d' % (i, Y_pred.shape[0]),
     sys.stdout.flush()
-
+Y_pred = np.array(Y_pred)
+np.savez("../USNS/Predicted/128/compressed/128_pred.npz",predicted=Y_pred)
