@@ -63,8 +63,8 @@ Y_pred, Y_pred_88, Y_pred_44, Y_pred_binary = model.predict(X_test[:][:,None,:,:
 
 #         masks_per[i, j] = per_mask
 
-map_thresh = 0.3
-bin_thresh = 0.5
+map_thresh = 0.5
+bin_thresh = 0.7
 
 import cv2
 kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE,(50,50))
@@ -73,7 +73,7 @@ OUTDIR='../USNS/Predicted/128'
 
 for i in range(Y_pred.shape[0]):
     imre = (Y_pred[i].squeeze() * 255).astype(np.uint8)
-    imre = cv2.morphologyEx(imre, cv2.MORPH_CLOSE, kernel)
+    # imre = cv2.morphologyEx(imre, cv2.MORPH_CLOSE, kernel)
     basename = str(i)
     cv2.imwrite(os.path.join(OUTDIR, basename + '.png'), imre)
     Y_pred[i] = imre

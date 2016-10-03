@@ -1,36 +1,35 @@
 import numpy as np
 import os
 import cv2
+import sys
+_data = np.load("../USNS/ResizedData/train/compressed/trainData.npz")
+Y_true = _data["Y"][:,None,:,:]
 
-DATAPATH = "../USNS/RawData/train"
-PREDPATH = "../USNS/Predicted/Raw"
-CORRPATH = "../USNS/Predicted/Corrected"
-rawMaskNames = [fname for fname in os.listdir(DATAPATH) if "mask" in fname]
-predictedMaskNames = [fname for fname in os.listdir(PREDPATH)]
+_data = np.load("../USNS/Predicted/128/compressed/128_pred.npz")
+Y_pred = _data["predicted"]
 
-def loadRawMask(fname):
-    mask = cv2.imread(DATAPATH + "/" + fname, cv2.IMREAD_GRAYSCALE)
-    mask = (mask > 128).astype(np.float32)
-    return mask
-
-def loadPredictedMask(fname):
-    mask = cv2.imread(PREDPATH + "/" + fname, cv2.IMREAD_GRAYSCALE)
-    mask = (mask > 128).astype(np.float32)
-    
-    return mask
-
-rawMasks = np.array([loadRawMask(fname) for fname in rawMaskNames])[:,None,:,:]
-print "Loaded Raw Masks",rawMasks.shape
-
+del _data
+print "Loaded all Data"
 from sklearn.decomposition import TruncatedSVD
-pca = TruncatedSVD(n_components=20).fit(rawMasks.reshape(-1, 580*420))
-print "Computed PCA Model"
-predictedMasks = np.array([loadPredictedMask(fname) for fname in predictedMaskNames])
-print "Loaded Predicted Masks"
-correctPredictedMasks = np.array(pca.transform(predictedMasks))
-print "Corrected the Predicted Masks"
-correctPredictedMasks = np.array([cmask.reshape(580,420) for cmask in correctPredictedMasks])
-for i in range(correctPredictedMasks.shape[0]):
-    cv2.imwrite(CORRPATH + "/" + i + ".png")
+pca2 = TruncatedSVD(n_components=20).fit(Y_true.reshape(-1, 128*128))
+print "PCA Fit Done"
 
-np.savez(CORRPATH + "/compressed/corrected.npz",final=correctPredictedMasks)
+def correct_mask(Y_pred):
+    Y128 = cv2.resize(Y_pred.squeeze(), (128, 128))
+    Y128 = (Y128 > 0).astype(np.float32)
+    Y_r = pca2.transform(Y128.reshape(-1))
+    mask = pca2.inverse_transform(Y_r).reshape(128, 128)
+    mask = cv2.resize(mask, (580, 420)) > 0.5
+    return mask
+
+with_masks = np.sum(np.sum(Y_pred.squeeze(), axis=2), axis=1) > 50000
+with_masks = with_masks.astype(np.float32)
+kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE,(50,50))
+for i in range(Y_pred.shape[0]):
+    if with_masks[i]>0:
+        imre = correct_mask(Y_pred[i])
+        imre = (imre.squeeze() * 255).astype(np.uint8)
+        imre = cv2.morphologyEx(imre, cv2.MORPH_CLOSE, kernel)
+        cv2.imwrite("../USNS/Predicted/Corrected/"+str(i)+".png", imre)
+    print '\r%d %d / %d' % (i, with_masks[i], Y_pred.shape[0]),
+    sys.stdout.flush()
