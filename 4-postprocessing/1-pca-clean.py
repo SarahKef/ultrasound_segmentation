@@ -31,5 +31,10 @@ for i in range(Y_pred.shape[0]):
         imre = (imre.squeeze() * 255).astype(np.uint8)
         imre = cv2.morphologyEx(imre, cv2.MORPH_CLOSE, kernel)
         cv2.imwrite("../USNS/Predicted/Corrected/"+str(i)+".png", imre)
+    else:
+        imre = np.zeros(shape=Y_pred[i].shape)
+        imre = (imre.squeeze() * 255).astype(np.uint8)
+        imre = cv2.morphologyEx(imre, cv2.MORPH_CLOSE, kernel)
+        cv2.imwrite("../USNS/Predicted/Corrected/"+str(i)+".png",imre)
     print '\r%d %d / %d' % (i, with_masks[i], Y_pred.shape[0]),
     sys.stdout.flush()
