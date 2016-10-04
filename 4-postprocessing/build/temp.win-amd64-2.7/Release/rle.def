@@ -1,0 +1,3 @@
+LIBRARY rle.pyd
+EXPORTS
+initrle
