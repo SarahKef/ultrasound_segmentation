@@ -61,7 +61,7 @@ history = model.fit(
             'outmap5' : Y_test_44,
             'outbin': Y_test_binary
     }),
-    nb_epoch=40,# 40 + 10 + 10 + 5 + 5
+    nb_epoch=20,# 40 + 10 + 10 + 5 + 5
     verbose=1,
     shuffle=True,
     callbacks=[model_checkpoint]

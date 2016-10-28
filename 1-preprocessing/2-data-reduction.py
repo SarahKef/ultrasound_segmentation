@@ -25,7 +25,7 @@ def filterImagesForPatient(pid):
     D = spdist.squareform(spdist.pdist(hists, metric='cosine'))
     
     # Used 0.005 to train at 0.67
-    closePairs = D + np.eye(D.shape[0]) < 0.008
+    closePairs = D + np.eye(D.shape[0]) < 0.01
     
     close_ij = np.transpose(np.nonzero(closePairs))
     incoherent_ij = [(i, j) for i, j in close_ij if dice.diceCoefficient(masks[i], masks[j]) < 0.2]

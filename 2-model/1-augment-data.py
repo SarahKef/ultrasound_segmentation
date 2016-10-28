@@ -22,9 +22,9 @@ def generate_image(X_img, Y_img, angle_range=None, zoom_range=None, shear_range=
     the resized image
     """
     if angle_range is None:
-        angle_range = (-5, 5)
+        angle_range = (-0.01, 0.01)
     if zoom_range is None:
-        zoom_range = (0.8, 1.2)
+        zoom_range = (0.99, 1.01)
     if shear_range is None:
         shear_range = (-5, 5) # shear angle in degrees
     if horiz_shift_range is None:

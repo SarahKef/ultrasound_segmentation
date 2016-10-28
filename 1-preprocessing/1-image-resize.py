@@ -2,7 +2,7 @@ import os
 import numpy as np
 import cv2
 import glob
-
+import sys
 import skimage.util
 import dice
 import scipy.spatial.distance as spdist
@@ -12,6 +12,8 @@ DATASAVEPATH = "../USNS/ResizedData/train"
 
 NEWIMGSIZE = (128,128)
 def loadPreProcess(imgName):
+    print '\r %s' % (imgName),
+    sys.stdout.flush()
     pnumber, imnumber = imgName.split(".")[0].split('_')
     maskName = imgName.split(".")[0]+"_mask.tif"
     
