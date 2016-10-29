@@ -21,13 +21,22 @@ from sklearn.cross_validation import train_test_split
 def generate_model():
     inp = Input(shape=(1000,))
     x = inp
-    # x = Dense(32*32)(inp)
+    x = Dense(32*32)(x)
     # x = Dense(64*64)(x)
-    x = Dense(128*128)(x)
-    x = Reshape((1,128,128))(x)
-    # x = Dropout(0.25)(x)
+    x = Dense(32*32)(x)
+    x = Reshape((1,32,32))(x)
+    
+    x = Convolution2D(32, 3, 3, border_mode='same')(x)
+    x = Convolution2D(32, 3, 3, border_mode='same')(x)
+    x = UpSampling2D((2, 2))(x)
+
+    x = Convolution2D(16, 3, 3, border_mode='same')(x)
+    x = Convolution2D(16, 3, 3, border_mode='same')(x)
+    x = UpSampling2D((2, 2))(x)
+
     x = Convolution2D(8, 3, 3, border_mode='same')(x)
     x = Convolution2D(8, 3, 3, border_mode='same')(x)
+    
     out = Convolution2D(1, 3, 3, activation='sigmoid', border_mode='same', name='outmap')(x)
     model = Model(input = inp, output=out)
     model.compile(optimizer='adam', loss='binary_crossentropy')
