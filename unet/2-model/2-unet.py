@@ -17,7 +17,7 @@ from keras.callbacks import ModelCheckpoint
 import keras.backend as K
 import numpy as np
 
-AUGMENTEDDATAPATH = "../USNS/AugmentedData/compressed"
+AUGMENTEDDATAPATH = "../../USNS/AugmentedData/compressed"
 data = np.load(AUGMENTEDDATAPATH+"/Data.npz")
 X_train=data['X_train']
 Y_train=data['Y_train']
@@ -42,9 +42,9 @@ model = unet.generate_model(input_shape)
 
 
 json_string = model.to_json()
-open('architecture.json', 'w').write(json_string)
+open('unet_architecture.json', 'w').write(json_string)
 
-model_checkpoint = ModelCheckpoint('weights.hdf5', monitor='val_loss', save_best_only=True, verbose=True)
+model_checkpoint = ModelCheckpoint('unet_weights.hdf5', monitor='val_loss', save_best_only=True, verbose=True)
 
 history = model.fit(
     X_train,
@@ -68,7 +68,7 @@ history = model.fit(
 )
 
 model_json = model.to_json()
-with open("model.json","w") as json_file:
+with open("unet_model.json","w") as json_file:
     json_file.write(model_json)
-model.save_weights("model_weights.h5")
+model.save_weights("unet_model_weights.h5")
 print("Saved the Model to Disk")

@@ -9,8 +9,8 @@ import matplotlib.cm as cm
 from sklearn.cross_validation import train_test_split
 import skimage.transform as sktransf
         
-CLEANEDDATAPATH = "../USNS/CleanedData/train/compressed"
-AUGMENTEDDATAPATH = "../USNS/AugmentedData/compressed"
+CLEANEDDATAPATH = "../../USNS/CleanedData/train/compressed"
+AUGMENTEDDATAPATH = "../../USNS/AugmentedData/compressed"
 
 def rand_float(rng):
     return rng[0] + np.random.random() * (rng[1] - rng[0])

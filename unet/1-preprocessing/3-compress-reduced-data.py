@@ -7,8 +7,8 @@ import skimage.util
 import dice
 import scipy.spatial.distance as spdist
 import pylab as pl
-DATAPATH = "../USNS/CleanedData/train"
-DATASAVEPATH = "../USNS/CleanedData/train/compressed"
+DATAPATH = "../../USNS/CleanedData/train"
+DATASAVEPATH = "../../USNS/CleanedData/train/compressed"
 
 def loadPreProcess(imgName):
     pnumber, imnumber = imgName.split(".")[0].split('_')

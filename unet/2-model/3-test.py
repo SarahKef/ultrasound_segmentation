@@ -19,8 +19,8 @@ import keras.backend as K
 import numpy as np
 import pylab as pl
 
-AUGMENTEDDATAPATH = "../USNS/AugmentedData/compressed"
-RESIZEDDATAPATH="../USNS/ResizedData/train/compressed"
+AUGMENTEDDATAPATH = "../../USNS/AugmentedData/compressed"
+RESIZEDDATAPATH="../../USNS/ResizedData/train/compressed"
 # fullData = np.load(RESIZEDDATAPATH+"/trainData.npz")
 # X_full = fullData['X']
 # Y_full = fullData['Y']
@@ -55,7 +55,7 @@ Y_test_44 = np.array([_resize(img, (4, 4)) for img in Y_test])
 
 
 # load json and create model
-json_file = open('model.json', 'r')
+json_file = open('unet_model.json', 'r')
 loaded_model_json = json_file.read()
 json_file.close()
 model = model_from_json(loaded_model_json,{'Maxout2D':Maxout2D})

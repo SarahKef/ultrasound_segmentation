@@ -7,8 +7,8 @@ import skimage.util
 import dice
 import scipy.spatial.distance as spdist
 import pylab as pl
-DATAPATH = "../USNS/RawData/train"
-DATASAVEPATH = "../USNS/ResizedData/train"
+DATAPATH = "../../USNS/RawData/train"
+DATASAVEPATH = "../../USNS/ResizedData/train"
 
 NEWIMGSIZE = (128,128)
 def loadPreProcess(imgName):

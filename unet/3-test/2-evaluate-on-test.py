@@ -18,7 +18,7 @@ import keras.backend as K
 import numpy as np
 import sys
 
-TESTDATAPATH = "../USNS/ResizedData/test/compressed"
+TESTDATAPATH = "../../USNS/ResizedData/test/compressed"
 data = np.load(TESTDATAPATH+"/testData.npz")
 X_test = data["X_test"]
 del data
@@ -26,7 +26,7 @@ del data
 
 print X_test.shape
 # load json and create model
-json_file = open('model.json', 'r')
+json_file = open('unet_model.json', 'r')
 loaded_model_json = json_file.read()
 json_file.close()
 model = model_from_json(loaded_model_json,{'Maxout2D':Maxout2D})
@@ -69,7 +69,7 @@ bin_thresh = 0.7
 import cv2
 kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE,(50,50))
 
-OUTDIR='../USNS/Predicted/128'
+OUTDIR='../../USNS/Predicted/128'
 
 for i in range(Y_pred.shape[0]):
     imre = (Y_pred[i].squeeze() * 255).astype(np.uint8)
@@ -80,4 +80,4 @@ for i in range(Y_pred.shape[0]):
     print '\r%d / %d' % (i, Y_pred.shape[0]),
     sys.stdout.flush()
 Y_pred = np.array(Y_pred)
-np.savez("../USNS/Predicted/128/compressed/128_pred.npz",predicted=Y_pred)
+np.savez("../../USNS/Predicted/128/compressed/128_pred.npz",predicted=Y_pred)

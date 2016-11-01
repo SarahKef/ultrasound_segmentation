@@ -6,8 +6,8 @@ import skimage.util
 import dice
 import scipy.spatial.distance as spdist
 import pylab as pl
-DATAPATH= "../USNS/ResizedData/train/compressed"
-OUTDIR = "../USNS/CleanedData/train"
+DATAPATH= "../../USNS/ResizedData/train/compressed"
+OUTDIR = "../../USNS/CleanedData/train"
 def loadPatient(pid):
     data = np.load(DATAPATH+"/trainData"+str(pid)+".npz")
     # print "Data Loaded for ",pid

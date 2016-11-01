@@ -18,7 +18,7 @@ import keras.backend as K
 import numpy as np
 import sys
 
-trainDATAPATH = "../USNS/ResizedData/train/compressed"
+trainDATAPATH = "../../USNS/ResizedData/train/compressed"
 data = np.load(trainDATAPATH+"/trainData.npz")
 X_train = data["X"]
 del data
@@ -26,12 +26,12 @@ del data
 
 print X_train.shape
 # load json and create model
-json_file = open('model.json', 'r')
+json_file = open('unet_model.json', 'r')
 loaded_model_json = json_file.read()
 json_file.close()
 model = model_from_json(loaded_model_json,{'Maxout2D':Maxout2D})
 # load weights into new model
-model.load_weights("model_weights.h5")
+model.load_weights("unet_model_weights.h5")
 # model.compile(optimizer='adam', loss='binary_crossentropy',loss_weights=[1., 0.01])
 print("Loaded model from disk")
 
@@ -69,7 +69,7 @@ bin_thresh = 0.7
 import cv2
 kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE,(50,50))
 
-OUTDIR='../USNS/Predicted/128-train'
+OUTDIR='../../USNS/Predicted/128-train'
 
 for i in range(Y_pred.shape[0]):
     imre = (Y_pred[i].squeeze() * 255).astype(np.uint8)
@@ -80,4 +80,4 @@ for i in range(Y_pred.shape[0]):
     print '\r%d / %d' % (i, Y_pred.shape[0]),
     sys.stdout.flush()
 Y_pred = np.array(Y_pred)
-np.savez("../USNS/Predicted/128-train/compressed/128_train_pred.npz",predicted=Y_pred)
+np.savez("../../USNS/Predicted/128-train/compressed/128_train_pred.npz",predicted=Y_pred)
