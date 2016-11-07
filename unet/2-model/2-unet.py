@@ -40,6 +40,9 @@ print input_shape
 
 model = unet.generate_model(input_shape)
 
+from keras.utils.visualize_util import plot
+plot(model, to_file='unet_model.png')
+
 
 json_string = model.to_json()
 open('unet_architecture.json', 'w').write(json_string)

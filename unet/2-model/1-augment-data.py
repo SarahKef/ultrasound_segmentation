@@ -49,7 +49,7 @@ def generate_image(X_img, Y_img, angle_range=None, zoom_range=None, shear_range=
         shear=shear,
         translation=(horiz_shift, vert_shift)
     )
-    X2 = sktransf.warp(X2, tform, order=5, mode='edge')
+    X2 = sktransf.warp(X2, tform, order=5, mode='reflect')
     Y2 = sktransf.warp(Y2, tform, order=1)
 
     # gaussian noise
