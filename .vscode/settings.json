@@ -1,0 +1,14 @@
+{
+    "editor.fontSize": 16,
+    "editor.lineHeight": 21,
+    "python.linting.pylintEnabled": false,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/__pycache__":true,
+        "**/*.pyc":true,
+        "venv":true
+    }
+}
