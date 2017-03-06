@@ -10,3 +10,7 @@ mkdir -p ../USNS/ResizedData/test/compressed
 mkdir -p ../USNS/Predicted/Raw
 
 mkdir -p ../USNS/Predicted/Corrected/compressed
+
+mkdir -p ../USNS/Predicted/128/compressed/
+
+mkdir -p ../USNS/Predicted/128-train/compressed/

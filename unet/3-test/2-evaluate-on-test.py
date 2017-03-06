@@ -1,6 +1,6 @@
 import os
 os.environ['KERAS_BACKEND'] = 'theano'
-os.environ['THEANO_FLAGS'] = 'floatX=float32,device=gpu,lib.cnmem=0.8,dnn.conv.algo_bwd_filter=deterministic,dnn.conv.algo_bwd_data=deterministic,blas.ldflags=-LC:/toolkits/openblas-0.2.14-int32/bin -lopenblas'
+# os.environ['THEANO_FLAGS'] = 'floatX=float32,device=gpu,lib.cnmem=0.8,dnn.conv.algo_bwd_filter=deterministic,dnn.conv.algo_bwd_data=deterministic,blas.ldflags=-LC:/toolkits/openblas-0.2.14-int32/bin -lopenblas'
 import theano
 import keras
 from unet import *
@@ -31,7 +31,7 @@ loaded_model_json = json_file.read()
 json_file.close()
 model = model_from_json(loaded_model_json,{'Maxout2D':Maxout2D})
 # load weights into new model
-model.load_weights("model_weights.h5")
+model.load_weights("unet_model_weights.h5")
 # model.compile(optimizer='adam', loss='binary_crossentropy',loss_weights=[1., 0.01])
 print("Loaded model from disk")
 
